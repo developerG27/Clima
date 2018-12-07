@@ -1,8 +1,11 @@
 import React from 'react';
 
-const Location = () => (
-    <div>
-        Location
-    </div>
-);
+const Location = (props) => {
+    const {city} = props;
+    return (
+        <div>
+            {city}
+        </div>
+    )
+};
 export default Location;

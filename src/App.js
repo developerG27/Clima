@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import Location from "./components/Location";
 import WeatherData from "./components/WeatherData";
+import WeatherContainer from "./components/WeatherContainer";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Location/>
-        <WeatherData/>
-      </div>
+      <WeatherContainer/>
     );
   }
 }
