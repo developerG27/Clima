@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Location from "./components/Location";
-import WeatherData from "./components/WeatherData";
-import WeatherContainer from "./components/WeatherContainer";
+import WeatherLocation from "./components/WeatherLocation";
 
 class App extends Component {
   render() {
     return (
-      <WeatherContainer/>
+      <WeatherLocation/>
     );
   }
 }

@@ -8,9 +8,9 @@ import {
     RAIN,
     SNOW,
     WINDY,
-} from '../constants/weather.js';
+} from './../../../constants/weather.js';
 
-const WeatherData = () => (
+const Index = () => (
     <div>
         <WeatherTemperature
             temperature={20}
@@ -19,4 +19,4 @@ const WeatherData = () => (
         <WeatherExtraInfo humidity={80} wind={"10m/S"}/>
     </div>
 );
-export default WeatherData;
+export default Index;

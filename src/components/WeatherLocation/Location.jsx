@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Location = (props) => {
     const {city} = props;
     return (
@@ -8,4 +7,6 @@ const Location = (props) => {
         </div>
     )
 };
+
+
 export default Location;
