@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import LocationList from "./components/LocationLIst";
+import LocationList from "./components/LocationList";
 
 class App extends Component {
   render() {
