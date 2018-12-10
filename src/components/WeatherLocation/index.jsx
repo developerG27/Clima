@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import WeatherData from "./WeatherData";
 import Location from './Location';
 import './styles.css';
@@ -22,16 +23,23 @@ class WeatherContainer extends Component {
          city: 'Buenos Aires',
          data: data,
       };
+      console.log("constructor");
+   }
+
+   componentDidMount() {
+      console.log("componentDidMount");
+      this.handleUpdateClick();
+   }
+
+   componentDidUpdate(prevProps, prevState) {
+      console.log("componentDidUpdate");
    }
 
    handleUpdateClick = () => {
       fetch(api_weather).then(resolve => {
-         console.log(resolve);
          return resolve.json();
       }).then(data =>{
          const newWeather = transformWeather(data);
-         console.log(newWeather);
-         debugger;
          this.setState({
             data: newWeather
          });
@@ -39,12 +47,15 @@ class WeatherContainer extends Component {
    }
 
    render(){
+      console.log("render")
       const { data, city } = this.state;
       return(
          <div className="weatherLocationCont">
             <Location city={city}/>
-            <WeatherData data={data}/>
-            <button onClick={this.handleUpdateClick}>Aggiornare</button>
+            {data ?
+               <WeatherData data={data}/> :
+               <CircularProgress size={50}/>
+            }
          </div>
       );
    }
