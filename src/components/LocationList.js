@@ -13,7 +13,10 @@ const LocationList = () => (
          city="Cina"
       />
       <WeatherContainer
-         city="Mexico"
+         city="Barcelona,es"
+      />
+      <WeatherContainer
+         city="Washington,US"
       />
    </div>
 )

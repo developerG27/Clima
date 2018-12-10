@@ -4,19 +4,9 @@ import { PropTypes } from 'prop-types';
 import WeatherData from "./WeatherData";
 import Location from './Location';
 import './styles.css';
-import {
-    SUN,
-} from './../../constants/weather.js';
 import transformWeather from '../../services/transformWeather';
 import getUrlWeatherByCity from "../../services/getUrlWeatherByCity";
 
-
-const data = {
-    temperature: 6,
-    weatherState: SUN,
-    humidity: 10,
-    wind: '10 m/s',
-}
 
 class WeatherContainer extends Component {
    constructor(props){
