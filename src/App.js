@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import Paper from '@material-ui/core/Paper';
+import AppBar from '@material-ui/core/AppBar';
+import Typography from '@material-ui/core/Typography';
+import ToolBar from '@material-ui/core/Toolbar';
 import './App.css';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import LocationList from "./components/LocationList";
-import {MuiThemeProviderOld} from "@material-ui/core/es/styles/MuiThemeProvider";
 
 const cities = [
    "Buenos Aires,ar",
@@ -14,18 +18,36 @@ const cities = [
 class App extends Component {
 
    handleSelectionLocation = city => {
-      console.log("handleSelectionLocation");
+      console.log(`handleSelectionLocation ${city}`);
    }
   render() {
     return (
-       <MuiThemeProviderOld>
-          <div>
-            <LocationList
-               cities={cities}
-               onSelectedLocation={this.handleSelectionLocation}
-            />
-          </div>
-       </MuiThemeProviderOld>
+          <Grid>
+             <Row>
+                <AppBar position='sticky'>
+                   <ToolBar>
+                      <Typography variant='title' color='ineherit'>
+                         React Clima
+                      </Typography>
+                   </ToolBar>
+                </AppBar>
+             </Row>
+
+             <Row>
+                <Col xs={12} sm={12} md={6}>
+                   <LocationList
+                     cities={cities}
+                     onSelectedLocation={this.handleSelectionLocation}
+                   />
+                </Col>
+
+                <Col xs={12} sm={12} md={6}>
+                   <Paper elevation={4}>
+                      <div className='details'></div>
+                   </Paper>
+                </Col>
+             </Row>
+          </Grid>
     );
   }
 }
