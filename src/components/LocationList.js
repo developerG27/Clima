@@ -3,7 +3,7 @@ import WeatherContainer from "./WeatherLocation";
 import PropTypes from 'prop-types';
 
 const strToComponents = cities => (
-   cities.map(city => <WeatherContainer city={city}/>)
+   cities.map((city, index) => (<WeatherContainer key={index} city={city}/>))
 );
 
 const LocationList = ({cities}) => {
@@ -13,8 +13,6 @@ const LocationList = ({cities}) => {
          </div>
       );
 }
-
-
 
 LocationList.propTypes = {
       cities: PropTypes.array.isRequired,

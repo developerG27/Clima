@@ -16,16 +16,10 @@ class WeatherContainer extends Component {
          city,
          data: null,
       };
-      console.log("constructor");
    }
 
    componentDidMount() {
-      console.log("componentDidMount");
       this.handleUpdateClick();
-   }
-
-   componentDidUpdate(prevProps, prevState) {
-      console.log("componentDidUpdate");
    }
 
    handleUpdateClick = () => {
@@ -41,7 +35,6 @@ class WeatherContainer extends Component {
    }
 
    render(){
-      console.log("render")
       const { data, city } = this.state;
       return(
          <div className="weatherLocationCont">
