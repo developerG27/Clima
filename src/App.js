@@ -34,17 +34,11 @@ class App extends Component {
              </Row>
 
              <Row>
-                <Col xs={12} sm={12} md={6}>
+                <Col xs={12} sm={12} md={12}>
                    <LocationList
                      cities={cities}
                      onSelectedLocation={this.handleSelectionLocation}
                    />
-                </Col>
-
-                <Col xs={12} sm={12} md={6}>
-                   <Paper elevation={4}>
-                      <div className='details'></div>
-                   </Paper>
                 </Col>
              </Row>
           </Grid>
