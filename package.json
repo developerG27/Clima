@@ -6,6 +6,7 @@
     "@material-ui/core": "^3.6.2",
     "convert-unit": "^1.0.5",
     "convert-units": "^2.3.4",
+    "font-awesome": "^4.7.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
